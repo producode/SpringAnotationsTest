@@ -1,6 +1,16 @@
 package lautaro.JavaAnotattions;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class DirectorFinanciero implements Empleado {
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getNombreDeLaEmpresa() {
+		return nombreDeLaEmpresa;
+	}
 
 	@Override
 	public String getTareas() {
@@ -15,6 +25,12 @@ public class DirectorFinanciero implements Empleado {
 	}
 	
 	private CreacionInformeFinanciero informeFinanciero;
+	
+	@Value("${email}")
+	private String email;
+	
+	@Value("${nombreEmpresa}")
+	private String nombreDeLaEmpresa;
 
 	
 	public DirectorFinanciero(CreacionInformeFinanciero informeFinanciero) {
