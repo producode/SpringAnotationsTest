@@ -2,6 +2,7 @@ package lautaro.JavaAnotattions;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -35,7 +36,7 @@ public class ComercialExperimentado implements Empleado {
 	}
 	
 	@Autowired
-	@Qualifier("informeFinancieroTrim2")
+	@Qualifier("informeFinancieroTrim4") //bean ID que debe utilizar
 	private CreacionInformeFinanciero nuevoInforme;
 
 }
